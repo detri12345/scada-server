@@ -1,9 +1,9 @@
-const cors = require("cors");
-app.use(cors());
 const express = require("express");
-const app = express();
-app.use(cors());
+const cors = require("cors");
 
+const app = express();
+
+app.use(cors()); // 🔥 WAJIB
 app.use(express.json());
 
 let latestData = {};
@@ -18,7 +18,7 @@ app.post("/api/data", (req, res) => {
 });
 
 app.get("/api/data", (req, res) => {
-  res.send(latestData);
+  res.json(latestData);
 });
 
 const PORT = process.env.PORT || 3000;
