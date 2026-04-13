@@ -1,4 +1,5 @@
 {
+  "cors": "^2.8.5"
   "name": "scada-server",
   "version": "1.0.0",
   "description": "SCADA monitoring server",
